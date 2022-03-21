@@ -8,10 +8,17 @@ async function getUsers() {
   const rawData = await fetch(API)
   const users = await rawData.json()
   
+  const ul = document.createElement("ul")
+  const body = document.querySelector("body")
+
   users.forEach((user) => {
-    console.log(user.name);
+    const name = document.createElement("li")
+
+    name.textContent = user.name
+
+    body.appendChild(ul)
+    ul.appendChild(name)
   })
-  
 }
 
 

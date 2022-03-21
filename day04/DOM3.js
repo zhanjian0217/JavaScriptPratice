@@ -22,6 +22,7 @@ request.addEventListener("load", () => {
 
   let response = JSON.parse(request.responseText)
   response.forEach((user) => {
+    // console.log(user.name);
 
     const name = document.createElement("li")
     name.textContent = user.name
