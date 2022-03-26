@@ -1,0 +1,11 @@
+{
+  "name": "hello",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+  "hello": "echo 123",
+  "world": "parcel index.html"
+  }
+
+}
