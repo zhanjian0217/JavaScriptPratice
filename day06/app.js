@@ -78,32 +78,33 @@ cc.hello()
 
 
 ////////////////////////////////////////////////////////
-// function HeroCreator(name, power) {
-//   this.name = name
-//   this.power = power
-// }
-// console.log(HeroCreator.prototype);
+function SuperHeroCreator(name, power) {
+  this.name = name
+  this.power = power
+}
+console.log(SuperHeroCreator.prototype);
+console.log(SuperHeroCreator.__proto__.__proto__);
 
-// const actions = {
-//   attack: function () {
-//     console.log("attack")
-//   },
-//   eat: function () {
-//     console.log("eat")
-//   },
-// }
+const actions = {
+  attack: function () {
+    console.log("attack")
+  },
+  eat: function () {
+    console.log("eat")
+  },
+}
 
-// HeroCreator.prototype.attack = actions.attack
+SuperHeroCreator.prototype.attack = actions.attack
 
-// console.log(HeroCreator.prototype);
-
-
-// const h2 = new HeroCreator()
-// h2.attack()
-
-// console.log(h2);
+console.log(SuperHeroCreator.prototype);
 
 
+const h2 = new SuperHeroCreator("gian", 100000000)
+h2.attack()
+
+console.log(h2);
+
+////////////////////////////////////////////////////////////
 
 class Actions {
   attack() {
@@ -111,7 +112,7 @@ class Actions {
   }
 
   eat() {
-    console.log("eat")
+    console.log("eat")  
   }
 }
 
