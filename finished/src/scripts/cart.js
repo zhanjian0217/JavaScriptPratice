@@ -3,16 +3,16 @@ import { roundedNumber } from "./calc"
 class Cart {
   constructor() {
     this.items = []
-    this.discount = 1
+    // this.discount = 1
   }
 
   clear() {
     this.items = []
   }
 
-  setDiscount(value) {
-    this.discount = value
-  }
+  // setDiscount(value) {
+  //   this.discount = value
+  // }
 
   updateItem(item) {
     const { quantity } = item
@@ -43,7 +43,7 @@ class Cart {
       result -= 100
     }
 
-    return roundedNumber(result * this.discount)
+    return roundedNumber(result)
   }
 
   addItem(item) {

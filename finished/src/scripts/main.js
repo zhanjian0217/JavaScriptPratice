@@ -42,6 +42,7 @@ allCatCards.forEach((card) => {
 
     cart.addItem(item)
     renderCartItem(cart)
+    console.log(cart.items);
   })
 })
 
@@ -67,8 +68,8 @@ itemList.addEventListener("change", (e) => {
   renderCartItem(cart)
 })
 
-discountLink.addEventListener("click", (e) => {
-  e.preventDefault()
-  cart.setDiscount(0.8)
-  renderCartItem(cart)
-})
+// discountLink.addEventListener("click", (e) => {
+//   e.preventDefault()
+//   cart.setDiscount(0.8)
+//   renderCartItem(cart)
+// })
